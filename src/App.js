@@ -1,23 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import Abogado from "./Componentes/Abogado"; // ✅ Importamos el componente Abogado
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          SOY ABAGADO
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Abogado />  {/* ✅ Renderizamos el componente Abogado */}
     </div>
   );
 }
