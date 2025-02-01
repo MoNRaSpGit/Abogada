@@ -15,19 +15,17 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
-/* 
-  =======================================================
-     ESTILOS PARA EL ENCABEZADO
-  =======================================================
-*/
+/* =======================================================
+   ENCABEZADO
+======================================================= */
 .header-bar {
-  background-color: #1a1a2e;
-  color: white;
+  background-color: white; /* 📌 Fondo blanco */
+  color: #1a1a2e; /* 📌 Texto en color oscuro */
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid #DAA520; /* Dorado */
+  border-bottom: 3px solid #DAA520;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,14 +34,27 @@ h1, h2, h3 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo-text {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #DAA520;
+
+
+
+/* LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 180px; /* 📌 Ajusta la posición del logo */
+}
+
+.logo-initials, .logo-name, .logo-subtext {
+  color: #1a1a2e; /* 📌 Color oscuro */
+}
+
+.nav-links {
+  margin-right: 150px; /* 📌 Ajusta la posición del menú */
 }
 
 .nav-links a {
-  color: white;
+  color: #1a1a2e; /* 📌 Color oscuro para los enlaces */
   font-size: 1rem;
   margin-left: 15px;
   text-decoration: none;
@@ -54,34 +65,63 @@ h1, h2, h3 {
   color: #DAA520;
 }
 
+
+.logo-initials {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.logo-divider {
+  width: 2px;
+  height: 40px;
+  background-color: #1a1a2e;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  color: #1a1a2e;
+}
+
+.logo-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo-subtext {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 📌 RESPONSIVE HEADER */
 @media (max-width: 768px) {
   .header-bar {
-    flex-direction: column;
-    text-align: center;
+      flex-direction: column;
+      text-align: center;
   }
   
   .nav-links {
-    margin-top: 10px;
+      margin-top: 10px;
   }
   
   .nav-links a {
-    display: block;
-    margin: 5px 0;
+      display: block;
+      margin: 5px 0;
   }
 }
 
-/* Ajustar el margen del contenido para que no quede oculto por el header */
+/* Ajustar margen para que el contenido no quede oculto por el header */
 .abogado {
-  margin-top: 80px; /* Ajusta según la altura del encabezado */
+  margin-top: 80px;
 }
 
-/* 
-  =======================================================
-     CARRUSEL (ya incluimos esto antes)
-  =======================================================
-*/
+/* =======================================================
+   CARRUSEL
+======================================================= */
 .custom-carousel .carousel-placeholder {
-  height: 400px;
+  height: 4000px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,18 +130,27 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
-/* 
-  =======================================================
-     TARJETAS DE SERVICIOS
-  =======================================================
-*/
+/* =======================================================
+   SERVICIOS (Animación de entrada y estilo)
+======================================================= */
+.servicios-container {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.servicios-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .service-card {
   background-color: white;
   border: 2px solid #e2e8f0;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card h5 {
@@ -120,186 +169,270 @@ h1, h2, h3 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* RESPONSIVE SERVICES */
 @media (max-width: 768px) {
   .service-card {
     margin-bottom: 15px;
   }
 }
 
-/* 
-  =======================================================
-     PIE DE PÁGINA MEJORADO CON MÁS ESPACIO
-  =======================================================
-*/
+/* =======================================================
+   SEPARADOR ENTRE SECCIONES
+======================================================= */
+.section-separator {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to right, #1a1a2e, #DAA520);
+  margin: 50px 0;
+}
+
+/* =======================================================
+   TRABAJOS REALIZADOS (Animación y Estilo)
+======================================================= */
+.trabajos-container {
+  background: #1a1a2e;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.trabajos-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.trabajo-card {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.trabajo-card:hover {
+  transform: scale(1.05);
+}
+
+/* =======================================================
+   PIE DE PÁGINA
+======================================================= */
 .footer-container {
-    background-color: #1a1a2e;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-  }
-  
+  background-color: #1a1a2e;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #DAA520;
+  flex: 1;
+  text-align: left;
+}
+
+.footer-info {
+  flex: 2;
+  text-align: center;
+}
+
+.footer-map iframe {
+  width: 100%;
+  max-width: 300px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between; /* ✅ Distribuye mejor */
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .footer-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #DAA520;
-    flex: 1; /* ✅ Permite separación */
-    text-align: left;
-  }
-  
+
+  .footer-logo,
   .footer-info {
-    flex: 2; /* ✅ Más espacio en los datos */
     text-align: center;
   }
-  
-  .footer-socials {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .footer-info p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: #ddd;
-  }
-  
-  /* ✅ Espaciado entre secciones */
+
   .footer-content > div {
-    
-    padding: 10px 20px;
+    padding: 15px 0;
   }
-  
-  /* ✅ Centrar redes sociales */
-  .footer-socials {
-    
-    display: flex;
-    justify-content: right;
-    gap: 15px;
-    font-size: 1.2rem;
+}
+
+/* =======================================================
+   ESPACIO ANTES DEL PIE DE PÁGINA
+======================================================= */
+.footer-spacing {
+  height: 100px;
+  background: transparent;
+}
+
+
+
+/* =======================================================
+   FRASES MOTIVACIONALES
+======================================================= */
+.frases-container {
+  text-align: center;
+  padding: 50px 0;
+  background: #f8f8f8;
+}
+
+.frase-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.frase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.frase-card p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #333;
+}
+
+.frase-card h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE FRASES */
+@media (max-width: 768px) {
+  .frase-card {
+      margin-bottom: 20px;
   }
+}
+
+
+
+
+/* Carrusel a pantalla completa */
+.carousel-container {
+  width: 100%;
+  margin-bottom: 20px;  
   
-  .footer-socials a {
-    color: #bbb;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .footer-socials a:hover {
-    color: #DAA520;
-  }
-  
-  /* Línea sutil arriba del footer */
-  .footer-bottom {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.85rem;
-    opacity: 0.7;
-    text-align: center;
-  }
-  
-  /* ✅ Ajustar espaciado en móviles */
-  @media (max-width: 768px) {
-    .footer-content {
+}
+
+.carousel-placeholder {
+  width: 100%;
+  height: 850px; /* 📌 AJUSTA AQUÍ SI QUIERES QUE SEA MÁS ALTO O MÁS BAJO */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Mini Contacto */
+.mini-contacto {
+  display: flex;
+  justify-content: space-between; /* 📌 Distribuye los elementos */
+  align-items: center;
+  background: #1a1a2e;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 📌 Espacio entre el icono y el texto */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.contact-text {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-right {
+  margin-right: 50px; /* 📌 Modifica este valor para mover a la derecha */
+}
+
+/* 📌 RESPONSIVE: Alinear en columna en pantallas pequeñas */
+@media (max-width: 768px) {
+  .mini-contacto {
       flex-direction: column;
       text-align: center;
-    }
-  
-    .footer-logo,
-    .footer-info,
-    .footer-socials {
+  }
+
+  .contact-left,
+  .contact-center,
+  .contact-right {
+      margin: 10px 0; /* 📌 Agrega separación entre los elementos */
       text-align: center;
-    }
-  
-    .footer-content > div {
-      padding: 15px 0; /* ✅ Más espacio entre elementos */
-    }
   }
+}
 
 
-  /* 
-  =======================================================
-     ESTILOS PARA EL MAPA EN EL FOOTER
-  =======================================================
-*/
-.footer-map {
-    flex: 1; /* ✅ Hace que el mapa ocupe espacio */
-    text-align: center;
-    padding: 10px 20px;
-  }
-  
-  .footer-map iframe {
-    width: 100%;
-    max-width: 300px; /* ✅ Ajusta el tamaño del mapa */
-    height: 150px;
-    border-radius: 10px;
-  }
-  
-  .footer-map a {
-    display: block;
-    color: #DAA520;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 5px;
-  }
-  
-  .footer-map a:hover {
-    text-decoration: underline;
-  }
+.contact-center {
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 1.5rem; /* 📌 Tamaño del icono */
+  color: #DAA520; /* 📌 Color dorado */
+}
 
 
-/* 
-  =======================================================
-     ESTILOS PARA EL LOGO PERSONALIZADO
-  =======================================================
-*/
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacio entre las iniciales, la línea y el nombre */
-  }
-  
-  .logo-initials {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white; /* ✅ Letra blanca */
-  }
-  
-  .logo-divider {
-    width: 2px;
-    height: 40px;
-    background-color: white; /* ✅ Línea separadora blanca */
-  }
-  
-  .logo-text {
-    display: flex;
-    flex-direction: column;
-    color: white; /* ✅ Letra blanca */
-  }
-  
-  .logo-name {
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
-  
-  .logo-subtext {
-    font-size: 0.9rem;
-    font-weight: normal;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
+.logo-contacto {
+  display: flex;
+  align-items: center;
+}
 
-  .section-title{
-    margin-top:  110px;
-  }
-  
+.logo-text {
+  margin-left: 10px;
+}
+
+.contacto-info a {
+  color: #DAA520;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contacto-info a:hover {
+  text-decoration: underline;
+}
+
+.direccion {
+  font-size: 0.9rem;
+}
+
+/* Separador */
+.section-separator {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to right, #1a1a2e, #DAA520);
+  margin: 50px 0;
+}

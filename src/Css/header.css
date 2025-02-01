@@ -1,0 +1,94 @@
+
+.header-bar {
+    background-color: white; /* 📌 Fondo blanco */
+    color: #1a1a2e; /* 📌 Texto en color oscuro */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #DAA520;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  
+  /* LOGO */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 180px; /* 📌 Ajusta la posición del logo */
+  }
+  
+  .logo-initials, .logo-name, .logo-subtext {
+    color: #1a1a2e; /* 📌 Color oscuro */
+  }
+  
+  .nav-links {
+    margin-right: 150px; /* 📌 Ajusta la posición del menú */
+  }
+  
+  .nav-links a {
+    color: #1a1a2e; /* 📌 Color oscuro para los enlaces */
+    font-size: 1rem;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #DAA520;
+  }
+  
+  
+  .logo-initials {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a2e;
+  }
+  
+  .logo-divider {
+    width: 2px;
+    height: 40px;
+    background-color: #1a1a2e;
+  }
+  
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #1a1a2e;
+  }
+  
+  .logo-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  .logo-subtext {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* 📌 RESPONSIVE HEADER */
+  @media (max-width: 768px) {
+    .header-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+    }
+    
+    .nav-links a {
+        display: block;
+        margin: 5px 0;
+    }
+  }

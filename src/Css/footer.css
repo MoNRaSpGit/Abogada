@@ -1,0 +1,72 @@
+/* 🔹 Estilos generales del footer */
+.footer-container {
+  background-color: #121212; /* Color más oscuro para un look moderno */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔹 Contenido del footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 🔹 Logo del estudio */
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #DAA520; /* Dorado */
+}
+
+/* 🔹 Información de contacto */
+.footer-info {
+  flex: 2;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 🔹 Iconos en la información */
+.footer-icon {
+  color: #DAA520; /* Color dorado */
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* 🔹 Línea divisoria */
+.footer-divider {
+  width: 80%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2); /* Línea sutil */
+  margin: 20px auto;
+}
+
+/* 🔹 Texto de derechos reservados */
+.footer-bottom {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
+
+/* 📌 RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .footer-logo {
+      margin-bottom: 10px;
+  }
+  .footer-info {
+      text-align: center;
+  }
+  .footer-content > div {
+      padding: 10px 0;
+  }
+}

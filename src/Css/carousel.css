@@ -1,0 +1,66 @@
+/* 🔹 Carrusel a pantalla completa */
+.carousel-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Ajuste de cada slide en el carrusel */
+.carousel-slide {
+    position: relative;
+    width: 100%;
+    height: 900px; /* 📌 Ajusta aquí si quieres cambiar la altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* 🔹 Ajuste de la imagen dentro del carrusel */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 📌 Mantiene la proporción sin estirarse */
+}
+
+/* 🔹 Superposición del texto sobre la imagen */
+.carousel-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* 📌 Fondo oscuro para resaltar el texto */
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+.carousel-name {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* 🔹 Efecto de zoom suave en cada slide */
+.carousel-item {
+    overflow: hidden; /* Evita que la imagen desborde */
+}
+
+/* 🔹 Aplica el efecto de zoom en la imagen */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom-in 8s ease-in-out infinite; /* ⏳ Ajusta la duración del zoom */
+}
+
+/* 🔹 Definimos la animación */
+@keyframes zoom-in {
+    from {
+        transform: scale(1); /* Estado inicial (sin zoom) */
+    }
+    to {
+        transform: scale(1.1); /* Zoom progresivo */
+    }
+}
+

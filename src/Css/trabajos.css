@@ -1,0 +1,135 @@
+/* 🔹 Contenedor principal de la sección */
+.trabajos-container {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  padding: 60px 20px;
+  position: relative;
+  background: url("../Img/carusel1.jpg") no-repeat center center/cover;
+  color: white;
+  overflow: hidden;
+  animation: zoom-in 8s ease-in-out infinite alternate;
+}
+
+/* ✅ Animación de zoom en la imagen de fondo */
+@keyframes zoom-in {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* ✅ Activar visibilidad cuando el usuario llega */
+.trabajos-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔹 Filtro azul sobre la imagen de fondo */
+.trabajos-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 70, 150, 0.5); /* 📌 Filtro azul */
+  z-index: 1;
+}
+
+/* ✅ Asegurar que el contenido esté sobre la capa azul */
+.trabajos-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔹 Título de la sección */
+.trabajos-container .section-title {
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #D4AF37; /* Dorado */
+  
+}
+
+/* 🔹 Contenedor de tarjetas */
+.trabajos-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* 🔹 Estilos de las tarjetas */
+.trabajo-card {
+  background: rgba(255, 255, 255, 0.2); /* 📌 Fondo difuminado */
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(12px);
+  cursor: pointer; /* 📌 Indica que se puede hacer clic */
+}
+
+/* 🔹 Efecto hover */
+.trabajo-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 Ajuste del overlay en la tarjeta */
+.trabajo-overlay {
+  padding: 15px;
+}
+
+/* 🔹 Título de cada tarjeta */
+.trabajo-card h5 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Mini descripción inicial con efecto de ocultamiento */
+.trabajo-desc {
+  font-size: 1rem;
+  color: black; 
+  margin-top: 8px;
+  line-height: 1.4;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+}
+
+/* ✅ Cuando el usuario hace clic, la descripción completa se muestra */
+.trabajo-card.expanded .trabajo-desc {
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+}
+
+/* 🔹 Separador entre secciones */
+.trabajos-separator {
+  height: 80px;
+  background: transparent;
+}
+
+/* 📌 RESPONSIVE */
+@media (max-width: 768px) {
+  .trabajos-grid {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .trabajo-card {
+      width: 90%;
+  }
+}
