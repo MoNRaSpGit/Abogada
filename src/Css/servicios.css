@@ -94,3 +94,9 @@
     /* 🔹 1 columna en móviles */
   }
 }
+
+
+
+#services {
+  scroll-margin-top: 80px; /* Ajustar según el tamaño del header */
+}

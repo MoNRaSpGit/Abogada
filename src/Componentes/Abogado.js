@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Frases from "../Componentes/Frases.js";  // ✅ Importando Frases Motivadoras
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // ✅ Importando los subcomponentes
@@ -49,6 +50,9 @@ const Abogado = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+   
+    
+
     return (
         <div className="abogado">
             <Header />
@@ -56,9 +60,11 @@ const Abogado = () => {
             <MiniContacto isVisible={miniVisible} />
             <Servicios isVisible={serviciosVisible} />
             <TrabajosRealizados isVisible={trabajosVisible} />
+            <Frases />  {/* ✅ Ahora está como una sección aparte */}
             <Footer />
         </div>
     );
+    
 };
 
 export default Abogado;

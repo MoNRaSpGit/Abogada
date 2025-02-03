@@ -1,94 +1,191 @@
-
+/* 🔹 Contenedor principal del header */
 .header-bar {
-    background-color: white; /* 📌 Fondo blanco */
-    color: #1a1a2e; /* 📌 Texto en color oscuro */
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 3px solid #DAA520;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: #1a1a2e;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #DAA520;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 180px; /* Ajuste para escritorio */
+}
+
+.logo-initials {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.logo-divider {
+  width: 2px;
+  height: 40px;
+  background-color: #1a1a2e;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  color: #1a1a2e;
+}
+
+.logo-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo-subtext {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 🔹 Enlaces de navegación (Desktop) */
+.nav-links {
+  display: flex;
+  margin-right: 150px; /* Ajuste para escritorio */
+}
+
+.nav-links a {
+  color: #1a1a2e;
+  font-size: 1rem;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #DAA520;
+}
+
+/* 🔹 Estilos del botón hamburguesa */
+.hamburger-menu {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* Se muestra solo en móviles */
+}
+
+
+
+/* 🔹 Modal - Fondo Oscuro */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* 🔹 Modal - Contenido */
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* 🔹 Icono de usuario */
+.user-icon {
+  font-size: 5rem;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Botón de cerrar */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1a1a2e;
+}
+
+/* 🔹 Responsivo para móviles */
+@media (max-width: 768px) {
+  .modal-content {
+      width: 95%;
   }
-  
-  
-  
-  
-  /* LOGO */
+}
+
+
+
+
+
+/* 📌 SOLO para pantallas grandes (desktop) */
+@media (min-width: 769px) {
   .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 180px; /* 📌 Ajusta la posición del logo */
+      margin-left: 180px; /* Ajuste para escritorio */
   }
-  
-  .logo-initials, .logo-name, .logo-subtext {
-    color: #1a1a2e; /* 📌 Color oscuro */
-  }
-  
+
   .nav-links {
-    margin-right: 150px; /* 📌 Ajusta la posición del menú */
+      margin-right: 150px; /* Ajuste para escritorio */
   }
-  
+}
+
+/* 📌 RESPONSIVE: Modo móvil */
+@media (max-width: 768px) {
+  .header-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 20px;
+  }
+
+  /* 🔹 Ajuste del logo en móviles */
+  .logo-container {
+      margin-left: 20px; /* Alinear a la izquierda */
+  }
+
+  /* 🔹 Mostrar el botón hamburguesa */
+  .hamburger-menu {
+      display: block;
+  }
+
+  /* 🔹 Ocultar el menú de enlaces en móviles por defecto */
+  .nav-links {
+      position: absolute;
+      top: 80px;
+      right: -150px;
+      background: white;  
+      width: 100%;
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 2px solid #DAA520;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 🔹 Mostrar el menú cuando se active */
+  .nav-links.open {
+      display: flex;
+  }
+
   .nav-links a {
-    color: #1a1a2e; /* 📌 Color oscuro para los enlaces */
-    font-size: 1rem;
-    margin-left: 15px;
-    text-decoration: none;
-    transition: color 0.3s;
+      margin: 10px 0;
+      font-size: 1.2rem;
   }
-  
-  .nav-links a:hover {
-    color: #DAA520;
-  }
-  
-  
-  .logo-initials {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #1a1a2e;
-  }
-  
-  .logo-divider {
-    width: 2px;
-    height: 40px;
-    background-color: #1a1a2e;
-  }
-  
-  .logo-text {
-    display: flex;
-    flex-direction: column;
-    color: #1a1a2e;
-  }
-  
-  .logo-name {
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
-  
-  .logo-subtext {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  /* 📌 RESPONSIVE HEADER */
-  @media (max-width: 768px) {
-    .header-bar {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .nav-links {
-        margin-top: 10px;
-    }
-    
-    .nav-links a {
-        display: block;
-        margin: 5px 0;
-    }
-  }
+}

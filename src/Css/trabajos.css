@@ -9,6 +9,7 @@
   color: white;
   overflow: hidden;
   animation: zoom-in 8s ease-in-out infinite alternate;
+  margin-top: 100px; /* Ajusta este valor si es necesario */
 }
 
 /* ✅ Animación de zoom en la imagen de fondo */
@@ -51,11 +52,11 @@
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 120px; /* Antes estaba en 60px, lo duplicamos */
   text-align: center;
-  color: #D4AF37; /* Dorado */
-  
+  color: #D4AF37;
 }
+
 
 /* 🔹 Contenedor de tarjetas */
 .trabajos-grid {
@@ -103,11 +104,11 @@
   color: black; 
   margin-top: 8px;
   line-height: 1.4;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  transition: all 0.3s ease;
+  white-space: normal;  /* Permite saltos de línea */
+  overflow: visible;    /* Muestra todo el texto */
+  text-overflow: unset; /* No corta con "..." */
 }
+
 
 /* ✅ Cuando el usuario hace clic, la descripción completa se muestra */
 .trabajo-card.expanded .trabajo-desc {
@@ -118,9 +119,15 @@
 
 /* 🔹 Separador entre secciones */
 .trabajos-separator {
-  height: 80px;
+  height: 150px; /* Antes estaba en 80px, aumentamos el espacio */
   background: transparent;
 }
+
+
+
+
+
+
 
 /* 📌 RESPONSIVE */
 @media (max-width: 768px) {
@@ -133,3 +140,5 @@
       width: 90%;
   }
 }
+
+
