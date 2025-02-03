@@ -8,7 +8,7 @@ const Header = () => {
                 <span className="logo-initials">DRA</span>
                 <div className="logo-divider"></div>
                 <div className="logo-text">
-                    <span className="logo-name">Carla Gonzales</span>
+                    <span className="logo-name">Carla González</span>
                     <span className="logo-subtext">— Abogada —</span>
                 </div>
             </div>
