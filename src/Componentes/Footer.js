@@ -9,10 +9,10 @@ const Footer = () => {
                 <div className="footer-logo">Estudio Jurídico</div>
                 
                 <div className="footer-info">
-                    <p><FaMapMarkerAlt className="footer-icon" /> Maestra Maria Olimpia Pintos 86, Ciudad</p>
-                    <p><FaPhone className="footer-icon" /> (000) 123-4567</p>
-                    <p><FaEnvelope className="footer-icon" /> contacto@estudiojuridico.com</p>
-                    <p><FaWhatsapp className="footer-icon" /> +123 456 7890</p>
+                    <p><FaMapMarkerAlt className="footer-icon" /> 25 de mayo 218</p>
+                    <p><FaPhone className="footer-icon" /> 099793490</p>
+                    <p><FaEnvelope className="footer-icon" /> anaclanu@gmail.com</p>
+                    <p><FaWhatsapp className="footer-icon" /> 099793490</p>
                 </div>
             </div>
 
