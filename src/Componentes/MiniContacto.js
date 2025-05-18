@@ -36,11 +36,11 @@ const MiniContacto = () => {
             </div>
             <div className="contact-item contact-center">
                 <FaWhatsapp className="contact-icon whatsapp-icon" /> {/* 📌 Icono verde de WhatsApp */}
-                <span className="contact-text">092-123456</span>
+                <span className="contact-text">099793490</span>
             </div>
             <div className="contact-item contact-right">
                 <FaMapMarkerAlt className="contact-icon map-icon" /> {/* 📌 Icono de mapa */}
-                <span className="contact-text">Dirección: Maestra Maria Olimpia Pintos 86</span>
+                <span className="contact-text">25 de mayo 218</span>
             </div>
         </section>
     );
