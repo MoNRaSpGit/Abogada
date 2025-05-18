@@ -1,7 +1,8 @@
 {
   "name": "Abogada",
   "version": "0.1.0",
-  "homepage": "http://claudiabogada.com",
+  "homepage": "https://claudiabogada.com",
+
 
   "private": true,
   "dependencies": {
