@@ -31,7 +31,7 @@ const Header = () => {
                     <span className="logo-initials">DRA</span>
                     <div className="logo-divider"></div>
                     <div className="logo-text">
-                        <span className="logo-name">Carla González</span>
+                        <span className="logo-name">Claudia Nuñez</span>
                         <span className="logo-subtext">— Abogada —</span>
                     </div>
                 </div>
@@ -55,9 +55,9 @@ const Header = () => {
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button className="close-modal" onClick={toggleModal}>✖</button>
                         <FaUserCircle className="user-icon" />
-                        <h2>Carla González</h2>
+                        <h2>Claudia Nuñez</h2>
                         <p>
-                            Hola, soy Carla González, abogada especializada en derecho penal, civil y corporativo.
+                            Hola, soy Claudia Nuñez, abogada especializada en derecho penal, civil y corporativo.
                             Me dedico a brindar asesoría legal y defender los derechos de mis clientes con compromiso y ética profesional.
                         </p>
                     </div>

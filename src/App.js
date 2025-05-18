@@ -1,5 +1,4 @@
 import React from "react";
-
 import Abogado from "./Componentes/Abogado"; // ✅ Importamos el componente Abogado
 
 function App() {
