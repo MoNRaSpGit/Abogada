@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Abogada/static/css/main.156c6c83.css",
-    "main.js": "/Abogada/static/js/main.9e9b60ba.js",
-    "static/js/488.ef0a9048.chunk.js": "/Abogada/static/js/488.ef0a9048.chunk.js",
-    "static/media/carusel1.jpg": "/Abogada/static/media/carusel1.87bda6e1d0d8e6cfa587.jpg",
-    "static/media/carusel2.jpg": "/Abogada/static/media/carusel2.552d3ada7b727069015d.jpg",
-    "static/media/carusel3.jpg": "/Abogada/static/media/carusel3.0ee2ce102ec90c1e2fda.jpg",
-    "index.html": "/Abogada/index.html",
-    "main.156c6c83.css.map": "/Abogada/static/css/main.156c6c83.css.map",
-    "main.9e9b60ba.js.map": "/Abogada/static/js/main.9e9b60ba.js.map",
-    "488.ef0a9048.chunk.js.map": "/Abogada/static/js/488.ef0a9048.chunk.js.map"
+    "main.css": "/static/css/main.e01c22c9.css",
+    "main.js": "/static/js/main.d695ccf7.js",
+    "static/js/488.ef0a9048.chunk.js": "/static/js/488.ef0a9048.chunk.js",
+    "static/media/carusel1.jpg": "/static/media/carusel1.87bda6e1d0d8e6cfa587.jpg",
+    "static/media/carusel2.jpg": "/static/media/carusel2.552d3ada7b727069015d.jpg",
+    "static/media/carusel3.jpg": "/static/media/carusel3.0ee2ce102ec90c1e2fda.jpg",
+    "index.html": "/index.html",
+    "main.e01c22c9.css.map": "/static/css/main.e01c22c9.css.map",
+    "main.d695ccf7.js.map": "/static/js/main.d695ccf7.js.map",
+    "488.ef0a9048.chunk.js.map": "/static/js/488.ef0a9048.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.156c6c83.css",
-    "static/js/main.9e9b60ba.js"
+    "static/css/main.e01c22c9.css",
+    "static/js/main.d695ccf7.js"
   ]
 }
